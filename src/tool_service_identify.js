@@ -1,5 +1,5 @@
 import { pipeline, cos_sim } from '@xenova/transformers';
-import serviceList from './component/emon.service.agent2.json' with { type: 'json' };
+import serviceList from '../component/emon.service.agent2.json' with { type: 'json' };
 import { getState, session_store } from './session_store.js';
 
 

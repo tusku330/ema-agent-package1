@@ -1,5 +1,5 @@
 import axios from "axios";
-import serviceList from './component/emon.service.agent.json' with { type: 'json' };
+import serviceList from '../component/emon.service.agent2.json' with { type: 'json' };
 
 
 export async function createServiceEnquiryTool(service_code) {
@@ -19,7 +19,6 @@ export async function createServiceEnquiryTool(service_code) {
         }
     } catch (error) {
         console.log("Error calling enquiry API:", error.message);
-        // return { enquiry_number: null, error: `Failed to generate enquiry: ${error.response.data.message}` };
         return { request_number: null, error: `Failed to generate enquiry: ${error.response.data.message}` };
     }
 }
