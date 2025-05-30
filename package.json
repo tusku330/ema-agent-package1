@@ -1,0 +1,13 @@
+{
+  "name": "ema-agent-package",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["greeting"],
+  "author": "Kuzco",
+  "license": "ISC",
+  "description": "A greeting component"
+}
