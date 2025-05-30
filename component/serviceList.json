@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Citizen ID card",
+        "code": "5d8b13383666c358f659b2ee",
+        "tags": [
+            "citizen enquiry",
+            "citizen id card",
+            "id card",
+            "id card service"
+        ]
+    },
+    {
+        "name": "Driver's reference",
+        "code": "646db2bf0c717a06444d8d31",
+        "tags": [
+            "driver reference",
+            "driver information",
+            "driver enquiry"
+        ]
+    },
+    {
+        "name": "Reference on civil criminal records",
+        "code": "6336eef327f0b54986cb809c",
+        "tags": [
+            "criminal records",
+            "civil criminal records",
+            "reference on criminal records"
+        ]
+    },
+    {
+        "name": "Reference provided to unmarried persons",
+        "code": "63282f980ae1d271945eaccc",
+        "tags": [
+            "unmarried status",
+            "reference of unmarried"
+        ]
+    },
+    {
+        "name": "Reference of marital status",
+        "code": "63282e650ae1d271945eacca",
+        "tags": [
+            "married status",
+            "reference of married",
+            "marital status"
+        ]
+    }
+]
