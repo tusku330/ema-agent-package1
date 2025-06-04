@@ -1,4 +1,4 @@
-export { emaBot } from './app..js';
+export { emaBot } from './app.js';
 export { clearData, getData } from './component/session_store.js';
 
 // index.js
