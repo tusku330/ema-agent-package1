@@ -1,6 +1,6 @@
 import { pipeline, cos_sim } from '@xenova/transformers';
-import serviceList from '../component/emon.service.agent2.json' with { type: 'json' };
-import { getState, session_store } from './session_store.js';
+import serviceList from '../datasets/emon_service_list_v1.json' with { type: 'json' };
+import { getState } from '../component/session_store.js';
 
 
 // === CONFIG ===
@@ -66,7 +66,7 @@ const retrieveRelevantDocuments = async (query, topK = 2) => {
         score: cosSim(queryEmbedding, doc.embedding),
     }));
 
-    return scored.filter(doc => doc.score > 0.6).sort((a, b) => b.score - a.score).slice(0, topK);
+    return scored.filter(doc => doc.score > 0.7).sort((a, b) => b.score - a.score).slice(0, topK);
 };
 
 export async function initializeAgentServiceIdentify() {
@@ -112,19 +112,19 @@ export async function getServiceCodeByName(service_name, user_id) {
         if (state.relevant_docs.length > 0) {
             state.relevant_docs = state.relevant_docs.map((doc, index) => {
                 doc.id = index + 1;
-                serviceSuggestList += doc.id + ". " + doc.name + "; \n";
+                serviceSuggestList += doc.id + ". " + doc.text + "; \n";
                 return doc;
             });
 
             state.service_suggest = true;
-            console.log("Та аль үйлчилгээг сонирхож байна вэ? \n" + serviceSuggestList)
+            // console.log("Та аль үйлчилгээг сонирхож байна вэ? \n" + serviceSuggestList)
 
             state.response = true;
             state.responseText = "Та аль үйлчилгээг сонирхож байна вэ? \n" + serviceSuggestList;
         }
         else {
             state.service_suggest = false;
-            console.log(service_name, " нэртэй үйлчилгээ байхгүй байна. \n")
+            // console.log(service_name, " нэртэй үйлчилгээ байхгүй байна. \n")
 
             state.response = true;
             state.responseText = service_name, " нэртэй үйлчилгээ байхгүй байна. \n";
